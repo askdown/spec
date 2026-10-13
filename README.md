@@ -15,5 +15,11 @@ The reference implementations live in separate repositories:
 
 ## License
 
-The specification, JSON Schema and examples are licensed
-[CC BY 4.0](LICENSE). You may implement the format in any software.
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+The specification, JSON Schema and examples in this repository are licensed under the
+[Creative Commons Attribution 4.0 International License](LICENSE) (CC BY 4.0).
+
+You may share and adapt this material, and implement the Askdown format in any software —
+open source or not — provided you give appropriate credit. A link back to
+[github.com/askdown/spec](https://github.com/askdown/spec) is enough.
