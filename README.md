@@ -13,19 +13,6 @@ The reference implementations live in separate repositories:
 - [`@askdown/core`](https://github.com/askdown/core) — parser, serializer and validator.
 - [`@askdown/html`](https://github.com/askdown/html) — accessible HTML rendering and a vanilla JS runtime.
 
-## Versioning
-
-This repository is the source of truth for the format. Consumers vendor a copy of
-these files, pinned to a tag or commit here. Each release is tagged (e.g. `v0.2.0`);
-the on-the-wire format version is carried separately in the `askdown` field of the
-model (currently `"0.1"`).
-
-## Regenerating the example fixtures
-
-The `examples/*.json` files are produced by parsing the matching `*.ask` with
-`@askdown/core`. When the format changes, regenerate them with a local build of
-core (`node regen.mjs` against a checkout of `@askdown/core`).
-
 ## License
 
 The specification, JSON Schema and examples are licensed
