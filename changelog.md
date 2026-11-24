@@ -12,8 +12,8 @@ Changelog
 * Added a Test workflow that runs on every push to main and every pull request.
   It checks that every example has a `.ask` and a `.json` file, and that the
   JSON conforms to the schema (`npm test`).
-* Releases are published to the vlt registry with the npm CLI instead of `vlt
-  publish`. They go live right away; only npm releases are staged.
+* Releases are staged on the vlt registry too, with `npm stage publish` (vlt
+  has no stage command), and approved the same way as on npm.
 * The publish jobs are safe to re-run: a version that is already published, or
   already staged on npm, is skipped instead of failing the job.
 * Fixed publishing to the vlt registry from GitHub Actions: npm now sends the
