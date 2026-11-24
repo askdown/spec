@@ -1,0 +1,34 @@
+{
+  "name": "@askdown/spec",
+  "version": "0.3.0",
+  "description": "The Askdown specification, JSON Schema and conformance examples.",
+  "license": "CC-BY-4.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askdown/spec.git"
+  },
+  "homepage": "https://askdown.dev/spec",
+  "keywords": [
+    "forms",
+    "markdown",
+    "askdown",
+    "specification",
+    "json-schema"
+  ],
+  "files": [
+    "askdown.md",
+    "askdown.schema.json",
+    "examples/"
+  ],
+  "exports": {
+    "./askdown.md": "./askdown.md",
+    "./askdown.schema.json": "./askdown.schema.json",
+    "./examples/*": "./examples/*",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "regen": "node --experimental-strip-types regen.mjs",
+    "release": "sh scripts/publish.sh"
+  }
+}

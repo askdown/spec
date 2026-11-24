@@ -8,6 +8,24 @@ The open specification for **Askdown**, a plain-text, Markdown-like language for
 
 Anyone may implement Askdown, in any software, open source or not.
 
+## Using the files in an implementation
+
+The spec, schema and examples are published as [`@askdown/spec`](https://www.npmjs.com/package/@askdown/spec), so an implementation can test against a pinned version:
+
+```sh
+npm install --save-dev @askdown/spec
+```
+
+```js
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+
+const schemaPath = require.resolve('@askdown/spec/askdown.schema.json');
+const examplePath = require.resolve('@askdown/spec/examples/rsvp.ask');
+```
+
+Every `examples/*.ask` file has a `*.json` next to it with the form model a conforming parser produces.
+
 The reference implementations live in separate repositories:
 
 - [`@askdown/core`](https://github.com/askdown/core) — parser, serializer and validator.
