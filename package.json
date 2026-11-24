@@ -29,6 +29,7 @@
   },
   "scripts": {
     "regen": "node --experimental-strip-types regen.mjs",
+    "test": "node scripts/check.mjs",
     "release": "sh scripts/publish.sh"
   }
 }

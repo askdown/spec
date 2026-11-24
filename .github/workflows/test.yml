@@ -1,0 +1,29 @@
+# Checks the spec's files on every push to main and every pull request: the
+# JSON Schema compiles, and every example has a .ask and a .json file that
+# conforms to the schema. The publish workflow runs the same check.
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - run: npm install --no-save ajv@8
+      - run: node scripts/check.mjs

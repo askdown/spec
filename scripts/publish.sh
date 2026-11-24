@@ -7,6 +7,7 @@ cd "$(dirname "$0")/.."
 dry=""
 [ "${1:-}" = "--dry-run" ] && dry="--dry-run"
 echo "== npm"
-npm publish --access public $dry
+# Explicit, because a user config may map the @askdown scope to the vlt registry.
+npm publish --access public --@askdown:registry=https://registry.npmjs.org/ $dry
 echo "== vlt"
-vlt registry main publish $dry
+vlt registry main publish --access public $dry
