@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3.1 (????-??-??)
+0.3.1 (2026-11-25)
 ------------------
 
 * Releases are published from GitHub Actions with trusted publishing, and
