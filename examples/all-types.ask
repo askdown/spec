@@ -78,3 +78,6 @@ title: Every question type
 
 ? I agree to the terms *
 [switch]
+
+? Favourite colour
+[color default=#1F6F6A]

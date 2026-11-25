@@ -218,6 +218,12 @@
           "type": "switch",
           "label": "I agree to the terms",
           "required": true
+        },
+        {
+          "id": "favourite-colour",
+          "type": "color",
+          "label": "Favourite colour",
+          "default": "#1f6f6a"
         }
       ]
     }
