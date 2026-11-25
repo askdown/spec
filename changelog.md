@@ -19,6 +19,8 @@ Changelog
 * Fixed publishing to the vlt registry from GitHub Actions: npm now sends the
   trusted-publishing token exchange to the vlt registry with credentials,
   instead of failing with ENEEDAUTH.
+* Added the `color` question type. The answer is `#rrggbb` in lowercase;
+  `default` sets the starting colour.
 
 
 0.3.0 (2026-11-23)

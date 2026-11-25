@@ -176,6 +176,7 @@ Mixing `( )`, `[ ]` and numbered options in one question is an error.
 | `file` | Uploaded files | `accept`, `maxsize`, `maxfiles` | `accept`, `maxSize`, `maxFiles` |
 | `address` | Postal address | `country` | `country` |
 | `switch` | On or off | `on` | `default` |
+| `color` | A colour | `default` | `default` |
 
 ### 4.1 Text
 
@@ -308,6 +309,17 @@ A switch is an on-off control. It is off unless the `on` flag is set, which make
 
 A switch always has an answer, since off is an answer too. A required switch MUST be on, as for agreeing to terms. Implementations SHOULD render a switch with the ARIA `switch` role, and MAY render it as a checkbox.
 
+### 4.10 Colours
+
+```askdown
+? Brand colour
+[color default=#1f6f6a]
+```
+
+The answer is an sRGB colour, written as `#` and six lowercase hexadecimal digits, such as `#1f6f6a`. Implementations MAY accept `#rgb` and uppercase digits, and normalize them. `default` sets the starting colour, in the same form.
+
+A browser's colour picker always has a value, so a rendered colour question is answered with its default, or `#000000` without one, unless the respondent picks another.
+
 ## 5. Pages
 
 A line of three or more dashes starts a new page (a *section*). A page break MAY carry an id:
@@ -412,6 +424,7 @@ A response maps question ids to answers:
 | `phone` | string: an E.164 number, such as `+31612345678` |
 | `address` | object with `street`, `city`, `country` and optionally `region` and `postalCode`; `country` is an uppercase ISO 3166-1 alpha-2 code |
 | `switch` | boolean: `true` when on |
+| `color` | string: `#rrggbb`, lowercase |
 
 A choice's value defaults to its label (see [§3.3](#33-choice-values-and-flags)), so for a form that sets no explicit values these are the labels verbatim.
 

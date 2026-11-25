@@ -110,7 +110,8 @@
             "checkbox-grid",
             "file",
             "address",
-            "switch"
+            "switch",
+            "color"
           ]
         }
       },
@@ -162,6 +163,9 @@
         },
         {
           "$ref": "#/$defs/switch"
+        },
+        {
+          "$ref": "#/$defs/color"
         }
       ]
     },
@@ -638,6 +642,25 @@
         "default": {
           "type": "boolean",
           "description": "On by default."
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "color": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/question"
+        }
+      ],
+      "properties": {
+        "type": {
+          "const": "color"
+        },
+        "default": {
+          "type": "string",
+          "pattern": "^#[0-9a-f]{6}$",
+          "description": "Starting colour, as #rrggbb."
         }
       },
       "unevaluatedProperties": false
