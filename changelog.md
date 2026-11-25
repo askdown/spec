@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.4.0 (????-??-??)
+0.3.1 (????-??-??)
 ------------------
 
 * Releases are published from GitHub Actions with trusted publishing, and
